@@ -1,29 +1,22 @@
 #include <iostream>
-#include "Queue.h"
+
+#include "LQueue.h"
 
 
 int main()
 {
-
-	AQueue<char> qu(7);
-	
-	qu.enqueue(4);
-	qu.enqueue(8);
-	qu.enqueue('4');
+	LQueue<char> qu= LQueue<char>();
+	qu.enqueue(5);
 	qu.enqueue('8');
-	qu.enqueue('y');
-	qu.enqueue('i');
-	
+	qu.enqueue('j');
+	qu.enqueue(7);
 	qu.dequeue();
-	qu.dequeue();	
-	qu.dequeue();
-	qu.enqueue('#');
-	qu.enqueue('8');
-	qu.enqueue('y');
-	qu.enqueue('%');
-	qu.Clear();
-	std::cout<<qu.isEmpty() << std::endl;
-	qu.enqueue('n');
-	char ch = qu.Front();
-	std::cout << ch << std::endl;
+	//qu.clear();
+	std::cout<<qu.length()<<'\n';
+	//std::cin.get();
+	LQueue<char>* p = new LQueue<char>;
+	p->enqueue('h');
+	std::cout << p->length() << '\n';
+	delete p;
 }
+
